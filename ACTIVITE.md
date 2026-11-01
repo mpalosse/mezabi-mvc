@@ -4,7 +4,12 @@
 
 ### 1.1 Modification du fichier README
 
-Modifiez le fichier README avec vos nom, prénom et groupe de TP.
+Modifiez le fichier README :
+- Votre NOM
+- Votre PRENOM
+- Cochez votre Groupe de TP
+
+Enregistrez, commit and push avec le message suivant :
 
 > fix #1.1 Fichier README OK
 
@@ -20,7 +25,7 @@ Pour lancer l'application, ouvrez un terminal et depuis la racine du projet, ex�
 
 ```
 $ docker compose up -d 
-$ docker compose exec mezabi-1 composer update
+$ docker compose exec mezabi composer update
 ```
 
 Github va vous demander un token.
@@ -50,7 +55,7 @@ Vérifiez que l'application fonctionne comme attendu.
 Pour l'accès aux logs de l'application :
 
 ```
-$ docker logs mezabi-1-app --follow
+$ docker logs mezabi-ct --follow
 ```
 
 > fix #1.2 Application fonctionne localement

@@ -22,11 +22,11 @@ $message = null;
 if ($modeEdition) {
     try {
         $dataSource = new DataSource(
-            $host = 'mezabi-1-db',
+            $host = 'mezabi-db',
             $port = '3306', 
-            $db = 'mezabi-1', 
-            $user = 'mezabi-1', 
-            $pass = 'mezabi-1', 
+            $db = 'mezabi-db', 
+            $user = 'mezabi-user', 
+            $pass = 'mezabi-password', 
             $charset = 'utf8mb4'
         );
 

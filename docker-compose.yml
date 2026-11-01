@@ -1,19 +1,23 @@
 services:
-  mezabi-1:
-    image: webdevops/php-apache-dev:8.2-alpine
-    container_name: mezabi-1-app
+  mezabi:
+    image: webdevops/php-apache-dev:8.4-alpine
+    container_name: mezabi-ct
     working_dir: /app/
     ports:
       - 8080:80
     volumes:
       - ./:/app/
-  mezabi-1-db:
-    image: mysql:8
-    container_name: mezabi-1-db
     environment:
-      - MYSQL_USER=mezabi-1
-      - MYSQL_DATABASE=mezabi-1
-      - MYSQL_PASSWORD=mezabi-1
+      - GIT_CONFIG_COUNT=1
+      - GIT_CONFIG_KEY_0=safe.directory
+      - GIT_CONFIG_VALUE_0=/app
+  mezabi-db:
+    image: mysql:8
+    container_name: mezabi-db-ct
+    environment:
+      - MYSQL_USER=mezabi-user
+      - MYSQL_DATABASE=mezabi-db
+      - MYSQL_PASSWORD=mezabi-password
       - MYSQL_ROOT_PASSWORD=root
     ports:
       - "6612:3306"
