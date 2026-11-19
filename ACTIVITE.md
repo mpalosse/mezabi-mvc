@@ -1,4 +1,4 @@
-# Mezabi-1 ou une conception MVC perfectible
+# Mezabi ou une conception MVC perfectible
 
 ## 1. Travail préliminaire
 
@@ -41,7 +41,7 @@ Vous pouvez en générer un via le site Github en suivant les étapes suivantes 
 
 Si vous utilisez une clé SSH pour vous authentifier sur Github, vous aurez besoin d'ajouter un token à la commande composer, avant d'executer composer update :
 ```
-$ docker compose exec mezabi-1 composer config --global github-oauth.github.com <token>
+$ docker compose exec mezabi composer config --global github-oauth.github.com <token>
 ```
 où <token> est le code généré lors de la procédure de génération de token.
 
